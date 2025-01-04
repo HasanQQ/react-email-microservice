@@ -1,0 +1,15 @@
+{
+    "printWidth": 120,
+    "trailingComma": "es5",
+    "tabWidth": 4,
+    "semi": true,
+    "quoteProps": "consistent",
+    "overrides": [
+        {
+            "files": "*.{yml,yaml}",
+            "options": {
+                "tabWidth": 2
+            }
+        }
+    ]
+}

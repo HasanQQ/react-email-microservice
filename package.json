@@ -1,0 +1,28 @@
+{
+    "name": "react-email-microservice",
+    "private": true,
+    "sideEffects": false,
+    "type": "module",
+    "scripts": {
+        "dev": "email dev --dir ./app/emails",
+        "build": "rm -rf dist && rollup --config rollup.config.ts --configPlugin @rollup/plugin-typescript",
+        "start": "node ./dist/index.js"
+    },
+    "dependencies": {
+        "@react-email/components": "0.0.31",
+        "express": "^4.21.2",
+        "react": "19.0.0",
+        "react-dom": "19.0.0"
+    },
+    "devDependencies": {
+        "@rollup/plugin-typescript": "^12.1.2",
+        "@types/express": "^5.0.0",
+        "@types/node": "^22.10.5",
+        "@types/react": "19.0.1",
+        "@types/react-dom": "19.0.1",
+        "glob": "^11.0.0",
+        "react-email": "3.0.4",
+        "rollup": "^4.29.1",
+        "typescript": "^5.7.2"
+    }
+}

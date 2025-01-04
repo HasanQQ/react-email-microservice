@@ -1,0 +1,16 @@
+{
+    "editor.formatOnSave": true,
+    "editor.formatOnType": false,
+    "editor.rulers": [120],
+    "eslint.enable": true,
+    "prettier.enable": true,
+    "[html][css][scss]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript][javascriptreact][typescript][typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json][jsonc][yaml]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
+}
