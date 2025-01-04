@@ -17,6 +17,31 @@ List of available commands.
 | `npm run build` | Build the production server with static files. |
 | `npm run start` | Run the production server.                     |
 
+## Example Usage
+
+After build you can send component properties to the `[POST] http://localhost:3000/:template` endpoint as a JSON body.
+For example:
+
+```bash
+curl \
+    --request POST \
+    --url http://localhost:3000/notion-magic-link \
+    --header 'Content-Type: application/json' \
+    --data '{"loginCode":"sparo-ndigo-amurt-secan"}'
+```
+
+Response will be something like that:
+
+```json
+{
+    "message": "SUCCESS",
+    "body": {
+        "html": "...",
+        "text": "..."
+    }
+}
+```
+
 ## TODOs
 
 -   [ ] `zod` implementation for request payloads
