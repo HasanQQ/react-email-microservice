@@ -1,12 +1,12 @@
 import { defineConfig } from "rollup";
 import typescript from "@rollup/plugin-typescript";
-import cloneStaticFiles from "./rollup/plugin-clone-static-files";
+import cloneStaticFiles from "./core/rollup/plugin-clone-static-files";
 
 export default defineConfig([
     {
-        input: "app/main.ts",
+        input: "./core/express/main.ts",
         output: {
-            file: "dist/index.js",
+            file: "./dist/index.js",
             format: "esm",
         },
         plugins: [

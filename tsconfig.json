@@ -1,7 +1,7 @@
 {
     "include": [
         "app/**/*",
-        "rollup/**/*",
+        "core/**/*",
         "rollup.config.ts" //
     ],
     "compilerOptions": {
