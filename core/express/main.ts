@@ -16,7 +16,7 @@ app.get("/", async (req, res) => {
 });
 
 // route: render
-app.post("/:template", async (req, res, next) => {
+app.post("/templates/:template/render", async (req, res, next) => {
     // target template
     const template = templates[req.params.template];
 

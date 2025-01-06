@@ -19,13 +19,13 @@ List of available commands.
 
 ## Example Usage
 
-After build you can send component properties to the `[POST] http://localhost:3000/:template` endpoint as a JSON body.
+After build you can send component properties to the `[POST] http://localhost:3000/templates/:template/render` endpoint as a JSON body.
 For example:
 
 ```bash
 curl \
     --request POST \
-    --url http://localhost:3000/notion-magic-link \
+    --url http://localhost:3000/templates/notion-magic-link/render \
     --header 'Content-Type: application/json' \
     --data '{"loginCode":"sparo-ndigo-amurt-secan"}'
 ```
