@@ -1,9 +1,12 @@
+import { z } from "zod";
 import asset from "@/utils/asset";
 import { Body, Container, Head, Heading, Html, Img, Link, Preview, Text } from "@react-email/components";
 
-interface NotionMagicLinkEmailProps {
-    loginCode?: string;
-}
+export const schema = z.object({
+    loginCode: z.string(),
+});
+
+type NotionMagicLinkEmailProps = z.infer<typeof schema>;
 
 const assets = {
     logo: asset("/static/notion-logo.png"),

@@ -1,3 +1,4 @@
+import { z } from "zod";
 import asset from "@/utils/asset";
 import {
     Body,
@@ -17,17 +18,19 @@ import {
     Tailwind,
 } from "@react-email/components";
 
-interface VercelInviteUserEmailProps {
-    username?: string;
-    userImage?: string;
-    invitedByUsername?: string;
-    invitedByEmail?: string;
-    teamName?: string;
-    teamImage?: string;
-    inviteLink?: string;
-    inviteFromIp?: string;
-    inviteFromLocation?: string;
-}
+export const schema = z.object({
+    username: z.string(),
+    userImage: z.string(),
+    invitedByUsername: z.string(),
+    invitedByEmail: z.string().min(10).email(),
+    teamName: z.string(),
+    teamImage: z.string(),
+    inviteLink: z.string(),
+    inviteFromIp: z.string(),
+    inviteFromLocation: z.string(),
+});
+
+type VercelInviteUserEmailProps = z.infer<typeof schema>;
 
 const assets = {
     logo: asset("/static/vercel-logo.png"),

@@ -12,7 +12,8 @@
         "@react-email/components": "0.0.31",
         "express": "^4.21.2",
         "react": "19.0.0",
-        "react-dom": "19.0.0"
+        "react-dom": "19.0.0",
+        "zod": "^3.24.1"
     },
     "devDependencies": {
         "@rollup/plugin-typescript": "^12.1.2",
