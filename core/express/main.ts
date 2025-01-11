@@ -7,8 +7,7 @@ import { ZodError } from "zod";
 const APP_PORT = 3000;
 
 // express instance
-const app = express();
-app.use(express.urlencoded({ extended: true }));
+const app = express().use(express.json());
 
 // route: index
 app.get("/", async (req, res) => {
@@ -31,14 +30,8 @@ app.post("/templates/:template/render", async (req, res, next) => {
         return next();
     }
 
-    // parse the body
-    const props = (() => {
-        try {
-            return JSON.parse(req.body) as {};
-        } catch (error) {
-            return {};
-        }
-    })();
+    // get thw props from req
+    const props = req.body as {};
 
     // zod validation
     if (template.schema) {
