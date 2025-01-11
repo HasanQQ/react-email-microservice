@@ -18,6 +18,7 @@ export default defineConfig([
             "react/jsx-runtime", // jsx runtime
             "@react-email/components", // react email
             "express", // express server
+            "zod", // schema validation
         ],
     },
 ]);
