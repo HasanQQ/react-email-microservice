@@ -6,7 +6,7 @@ import { createElement } from "react";
 const APP_PORT = 3000;
 
 // express instance
-const app = express();
+const app = express().use(express.json());
 
 // route: index
 app.get("/", async (req, res) => {
@@ -29,14 +29,8 @@ app.post("/templates/:template/render", async (req, res, next) => {
         return next();
     }
 
-    // parse the body
-    const props = (() => {
-        try {
-            return JSON.parse(req.body) as {};
-        } catch (error) {
-            return {};
-        }
-    })();
+    // get thw props from req
+    const props = req.body as {};
 
     // create an element from template & props
     const component = createElement(template, props);
