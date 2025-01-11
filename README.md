@@ -44,6 +44,6 @@ Response will be something like that:
 
 ## TODOs
 
--   [ ] `zod` implementation for request payloads
+-   [x] ~zod implementation for request payloads~
 -   [ ] automatic template/file discovery for express side
 -   [ ] move core functions/files into a package
