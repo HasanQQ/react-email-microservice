@@ -7,19 +7,19 @@ import * as VercelInviteUserEmail from "./emails/vercel-invite-user";
 
 const templates = {
     "notion-magic-link": {
-        component: NotionMagicLinkEmail.default,
         schema: NotionMagicLinkEmail.schema,
+        component: NotionMagicLinkEmail.default,
     },
     "plaid-verify-identity": {
-        component: PlaidVerifyIdentityEmail.default,
         schema: PlaidVerifyIdentityEmail.schema,
+        component: PlaidVerifyIdentityEmail.default,
     },
     "stripe-welcome": {
         component: StripeWelcomeEmail.default,
     },
     "vercel-invite-user": {
-        component: VercelInviteUserEmail.default,
         schema: VercelInviteUserEmail.schema,
+        component: VercelInviteUserEmail.default,
     },
 };
 
@@ -27,8 +27,8 @@ type Templates = typeof templates;
 type TemplateKeys = keyof Templates;
 
 type TemplateObject<K extends TemplateKeys> = {
-    component: FunctionComponent<ComponentProps<Templates[K]["component"]>>;
     schema?: z.ZodSchema;
+    component: FunctionComponent<ComponentProps<Templates[K]["component"]>>;
 };
 
 export default templates as Record<TemplateKeys, TemplateObject<TemplateKeys>>;
