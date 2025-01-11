@@ -5,7 +5,7 @@ const assets = {
     logo: asset("/static/stripe-logo.png"),
 };
 
-export const StripeWelcomeEmail = () => (
+const StripeWelcomeEmail = () => (
     <Html>
         <Head />
         <Preview>You're now ready to make live transactions with Stripe!</Preview>

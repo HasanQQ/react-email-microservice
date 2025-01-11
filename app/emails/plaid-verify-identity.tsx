@@ -1,15 +1,18 @@
+import { z } from "zod";
 import asset from "@/utils/asset";
 import { Body, Container, Head, Heading, Html, Img, Link, Section, Text } from "@react-email/components";
 
-interface PlaidVerifyIdentityEmailProps {
-    validationCode?: string;
-}
+export const schema = z.object({
+    validationCode: z.string(),
+});
+
+type PlaidVerifyIdentityEmailProps = z.infer<typeof schema>;
 
 const assets = {
     logo: asset("/static/plaid-logo.png"),
 };
 
-export const PlaidVerifyIdentityEmail = ({ validationCode }: PlaidVerifyIdentityEmailProps) => (
+const PlaidVerifyIdentityEmail = ({ validationCode }: PlaidVerifyIdentityEmailProps) => (
     <Html>
         <Head />
         <Body style={main}>
