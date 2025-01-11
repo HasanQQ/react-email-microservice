@@ -39,7 +39,7 @@ const assets = {
     teamImage: "/static/vercel-team.png",
 };
 
-export const VercelInviteUserEmail = ({
+const VercelInviteUserEmail = ({
     username,
     userImage,
     invitedByUsername,

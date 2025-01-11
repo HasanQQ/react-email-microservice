@@ -12,7 +12,7 @@ const assets = {
     logo: asset("/static/plaid-logo.png"),
 };
 
-export const PlaidVerifyIdentityEmail = ({ validationCode }: PlaidVerifyIdentityEmailProps) => (
+const PlaidVerifyIdentityEmail = ({ validationCode }: PlaidVerifyIdentityEmailProps) => (
     <Html>
         <Head />
         <Body style={main}>

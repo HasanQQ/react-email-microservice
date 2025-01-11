@@ -12,7 +12,7 @@ const assets = {
     logo: asset("/static/notion-logo.png"),
 };
 
-export const NotionMagicLinkEmail = ({ loginCode }: NotionMagicLinkEmailProps) => (
+const NotionMagicLinkEmail = ({ loginCode }: NotionMagicLinkEmailProps) => (
     <Html>
         <Head />
         <Preview>Log in with this magic link</Preview>
