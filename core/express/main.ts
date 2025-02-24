@@ -56,12 +56,11 @@ app.post("/templates/:template/render", async (req, res, next) => {
             const errors: { [key: string]: string[] } = {};
 
             // map the issues
-            err.issues.map((issue) =>
-                issue.path.map((path) => {
-                    errors[path] = errors[path] || [];
-                    errors[path].push(issue.message);
-                })
-            );
+            err.issues.forEach((issue) => {
+                const key = issue.path.join(".");
+                errors[key] = errors[key] || [];
+                errors[key].push(issue.message);
+            });
 
             res.status(422).json({
                 message: "INVALID_PAYLOAD",
